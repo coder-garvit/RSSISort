@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         checkPermission();
 
         setContentView(R.layout.activity_main);
@@ -182,26 +181,35 @@ public class MainActivity extends AppCompatActivity implements BeaconConsumer {
                     BeaconManager.setRssiFilterImplClass(ArmaRssiFilter.class);
                     // Iterating through all Beacons from Collection of Beacons
                     ArrayList<Integer> arr = new ArrayList<Integer>();
-                    for (Beacon b:beacons){
-                        //RSSI
-                        Log.e("In MainActivity","RSSI is");
-                        Integer rssi = Integer.valueOf(b.getRssi());
-                        arr.add(rssi);
-                    }
+                    int count = 0;
+                        for (Beacon b : beacons) {
+                            //RSSI
+                            count+=1;
+                            System.out.println("Count : "+count);
+                            Integer rssi = Integer.valueOf(b.getRssi());
+                            arr.add(rssi);
+                        }
 
-                    /*textView = findViewById(R.id.textView1);
-                    textView.setText(arr.get(0));
-                    textView = findViewById(R.id.textView2);
-                    textView.setText(arr.get(1));
-                    */
                     Integer maxRssi = Collections.max(arr);
-                    textView = findViewById(R.id.textView);
+                    //setContentView(R.layout.activity_main);
+                    textView = (TextView) findViewById(R.id.textView);
+                    System.out.println(Integer.toString(maxRssi));
                     textView.setText(Integer.toString(maxRssi));
+
+                    TextView t1 = (TextView) findViewById(R.id.textView1);
+                    t1.setText(arr.get(0).toString());
+                    TextView t2 = (TextView) findViewById(R.id.textView2);
+                    try {
+                        t2.setText(arr.get(1).toString());
+                    }
+                    catch(Exception e)
+                    {}
+
                 }
 
-                if (beacons.size() == 0)
+                else if (beacons.size() == 0)
                 {
-                    textView =  findViewById(R.id.textView);
+                    textView =  (TextView) findViewById(R.id.textView);
                     textView.setText("No beacons found :(");
                 }
             }
