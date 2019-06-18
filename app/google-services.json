@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "178226263817",
+    "firebase_url": "https://indoornav1.firebaseio.com",
+    "project_id": "indoornav1",
+    "storage_bucket": "indoornav1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178226263817:android:70f6840173dae70c",
+        "android_client_info": {
+          "package_name": "com.example.indoornav1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178226263817-8eehiaf86rcme9m6ifu6o2s87glh338p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.indoornav1",
+            "certificate_hash": "5ab64cefa43c6f4a44d2ba9e91bbc2a40978a100"
+          }
+        },
+        {
+          "client_id": "178226263817-91fjcm2ijuv6gitg74cqdm4rh7f28u36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.indoornav1",
+            "certificate_hash": "2f7abb326b863e270c8949bcff1931232f5b72e5"
+          }
+        },
+        {
+          "client_id": "178226263817-grlq3jpqttltotdq3c7hs1g1vssp566g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEgXIAOODeVBNsBg8rD18vpezOVB-mq_Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178226263817-grlq3jpqttltotdq3c7hs1g1vssp566g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
